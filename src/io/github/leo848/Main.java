@@ -6,7 +6,7 @@ public class Main {
         Atom o = new Atom("Oxygen", 8, 8, 8);
 
         h.addBond(o);
-
+        h.printMolecule();
 
     }
 }
