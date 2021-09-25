@@ -26,17 +26,15 @@ public class Atom {
     }
 
     public void addBond(Atom atom) {
-
-
         bonds.add(atom);
         atom.bonds.add(this);
-        bonds.removeIf(e -> !e.equals(this));
+        bonds.removeIf(e -> e.equals(this));
     }
 
     public void removeBond(Atom atom) {
         atom.bonds.remove(this);
         bonds.remove(atom);
-        bonds.removeIf(e -> !e.equals(this));
+        bonds.removeIf(e -> e.equals(this));
     }
 
     public void printMolecule() {
